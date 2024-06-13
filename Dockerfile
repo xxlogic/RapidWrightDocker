@@ -28,6 +28,6 @@ WORKDIR $HOME
 
 # Bootstrap RapidWright files
 RUN python3 -c "import rapidwright; from com.xilinx.rapidwright.examples import Lesson1; Lesson1.main([])"
-RUN python3 -c "import rapidwright; from com.xilinx.rapidwright.util import FileTools;FileTools.ensureDataFilesAreStaticInstallFriendly("xc7a35t", "xc7k70t", "xc7k160t", "xc7k325t")
+RUN python3 -c "import rapidwright; from com.xilinx.rapidwright.util import FileTools;FileTools.ensureDataFilesAreStaticInstallFriendly(\"xc7a35t\", \"xc7k70t\", \"xc7k160t\", \"xc7k325t\")
 
 CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--no-browser"]
